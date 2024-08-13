@@ -1,38 +1,167 @@
-.App {
+
+body {
+  /* font-family: 'Inter', sans-serif; */
+  line-height: 1.6;
+  color: #e2e8f0;
+  background-color: #0f172a;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+
+/* ************************************************ header ******************************************* */
+
+.header {
+  background-color: #6366f1;
+  padding: 0.1rem 0 1rem 0;
   text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+ 
+.header h1 {
+  color: #ffffff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* **************************************************Navbar*********************************************** */
+
+nav {
+  background-color: #1e293b;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav ul {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
-.App-link {
-  color: #61dafb;
+nav ul li {
+  margin: 0.5rem 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav ul li a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+nav ul li a:hover {
+  color: #22d3ee;
+}
+
+/* ******************************************* Sections ********************************************** */
+.section {
+  background-color: #1e293b;
+  border-radius: 8px;
+  padding: 1.5rem ;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #334155;
+}
+
+h2, h3, h4 {
+  margin-top: 2rem;
+  color: #a5b4fc;
+}
+
+.section p {
+  font-size: 0.9rem;
+}
+
+pre {
+  font-family: 'Fira Code', monospace;
+  background-color: #1e293b;
+  border-radius: 4px;
+  padding: 1rem;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: 0.9rem;
+  border: 1px solid #334155;
+}
+
+button:hover {
+  background-color: #0ea5e9;
+  transform: translateY(-2px);
+}
+
+button {
+  background-color: #22d3ee;
+  color: #0f172a;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 1rem;
+}
+
+.endpoint {
+  background-color: #6366f1;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.http-method {
+  background-color: #22d3ee;
+  color: #0f172a;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 1rem;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid #334155;
+}
+
+th {
+  background-color: #6366f1;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.75rem;
+  color: #ffffff;
+}
+
+
+
+.parameter-table td:first-child {
+  font-weight: bold;
+  color: #22d3ee;
+}
+
+th, td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #334155;
 }
